@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkydqamscocwd"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_w6vq0"]
+[ext_resource type="Texture2D" uid="uid://bxytlxqulk346" path="res://Untitled_Artwork-1.png" id="2_1njp0"]
+[ext_resource type="Texture2D" uid="uid://dxrvcmnaadjgg" path="res://Untitled_Artwork-2.png" id="3_bxqdw"]
+[ext_resource type="Texture2D" uid="uid://f40iloitbphd" path="res://Untitled_Artwork-3.png" id="4_5nj0x"]
+[ext_resource type="Texture2D" uid="uid://ddcptxigkse5b" path="res://Untitled_Artwork-4.png" id="5_2x24x"]
+[ext_resource type="Texture2D" uid="uid://0yqpgwh7on6o" path="res://Untitled_Artwork-5.png" id="6_5ah3d"]
+[ext_resource type="Texture2D" uid="uid://cls3u3vcmo7le" path="res://Untitled_Artwork-6.png" id="7_kelhb"]
+[ext_resource type="Texture2D" uid="uid://dfb3jfbbf3wir" path="res://Untitled_Artwork-7.png" id="8_10pu7"]
+[ext_resource type="Texture2D" uid="uid://dyxfuqvpnj46p" path="res://Untitled_Artwork-8.png" id="9_gjorj"]
+[ext_resource type="Texture2D" uid="uid://bd3jc1x6gswy4" path="res://Untitled_Artwork-9.png" id="10_lgar3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4sxca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1njp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bxqdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5nj0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2x24x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5ah3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kelhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_10pu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gjorj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lgar3")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}]
+
+[node name="Player" type="Area2D"]
+position = Vector2(440, 310)
+script = ExtResource("1_w6vq0")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.09, 0.09)
+sprite_frames = SubResource("SpriteFrames_4sxca")
+animation = &"attack"
